@@ -8,7 +8,8 @@ const appAPI = {
         try {
             const res = await fetch(`${baseURL}/api/user`, {
                 headers: {
-                    Authorization: token
+                    Authorization: token,
+                    "ngrok-skip-browser-warning": 1
                 }
             }).then((res) => res.json())
             return res
@@ -21,7 +22,8 @@ const appAPI = {
         try {
             const res = await fetch(`${baseURL}/api/course`, {
                 headers: {
-                    Authorization: token
+                    Authorization: token,
+                    "ngrok-skip-browser-warning": 1
                 }
             }).then((res) => res.json())
             return res
@@ -36,7 +38,8 @@ const appAPI = {
                 method: "POST",
                 headers: {
                     Authorization: token,
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "ngrok-skip-browser-warning": 1
                 },
                 body: JSON.stringify(data)
             }).then((res) => res.json())
